@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View MCQs</title>
+</head>
+<body>
+
+<h2>Uploaded Chemistry MCQs</h2>
+
+<div id="mcqList"></div>
+
+<script>
+let mcqs = JSON.parse(localStorage.getItem("mcqs")) || [];
+let output = "";
+
+mcqs.forEach((m, i) => {
+  output += `
+    <p><b>Q${i+1}:</b> ${m.q}</p>
+    <ul>
+      <li>A) ${m.a}</li>
+      <li>B) ${m.b}</li>
+      <li>C) ${m.c}</li>
+      <li>D) ${m.d}</li>
+    </ul>
+    <p><b>Answer:</b> ${m.ans}</p>
+    <hr>
+  `;
+});
+
+document.getElementById("mcqList").innerHTML = output;
+</script>
+
+</body>
+</html>

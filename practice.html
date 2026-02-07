@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCQ Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero">
+  <h1>ChemSphere</h1>
+  <p class="tagline">Practice Your Chemistry MCQs</p>
+</div>
+
+<div class="card" id="mcqCard">
+  <h2 id="question">Loading MCQ...</h2>
+
+  <div id="options">
+    <button onclick="checkAnswer(this)" class="optionBtn">Option A</button>
+    <button onclick="checkAnswer(this)" class="optionBtn">Option B</button>
+    <button onclick="checkAnswer(this)" class="optionBtn">Option C</button>
+    <button onclick="checkAnswer(this)" class="optionBtn">Option D</button>
+  </div>
+
+  <p id="result"></p>
+  <button onclick="nextMCQ()" id="nextBtn" style="display:none;">Next Question</button>
+</div>
+
+<script src="practice.js"></script>
+</body>
+</html>
